@@ -1,0 +1,18 @@
+<html>
+    <head>
+        {% stylesheets '@bootstrap_css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="content-container">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+        {% javascripts '@jquery' '@bootstrap_js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </body>
+</html>
